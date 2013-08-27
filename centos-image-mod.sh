@@ -29,8 +29,8 @@ console="ttyS0"
 
 function deps () {
     for file in ${@}; do
-        [ ! -z $(echo $file |grep -o "$lib") ] && 
-            cp -v ${file} ${lib}/
+        [ ! -z "$(echo $file |grep -o "$lib")" ] && 
+            cp -vH ${file} ${lib}/
     done
 }
 
